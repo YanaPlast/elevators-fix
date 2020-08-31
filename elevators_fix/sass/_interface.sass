@@ -1,0 +1,46 @@
+//Настройки для шрифтов
+$accentColor: #FFCC00
+$lighter: #FFE373
+$superLight: #FFF0B2
+$notBlack: #1f1f1f
+$notNotBlack: #808080
+$bg_grey: #E6E6E6
+body
+	+normal
+	font-size: 16px
+
+.button
+	padding: 10px 10px
+	+bold
+	text-transform: uppercase
+	border: 2px solid $accentColor
+	height: 45px
+	text-align: center
+	vertical-align: center
+	background-color: transparent
+	&:hover
+		background-color: #fff
+		border-color:#E9E9E9
+	&_colorful
+		background-color: $accentColor
+		color: #fff
+		&:hover
+			color: $accentColor
+			border: none
+.input
+	height: 50px
+	padding: 20px
+	border: 1px solid $bg_grey
+
+.section
+	padding: 80px 0 50px 0
+	&__title
+		text-transform: uppercase
+		font-size: 25px
+		color: $notBlack
+		text-align: center
+		+bold
+		letter-spacing: 1px
+@media(max-width: 768px)
+	.section
+		padding: 30px 0 20px 0

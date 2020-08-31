@@ -1,0 +1,21 @@
+.questions
+	padding-bottom: 80px
+	&__block
+		display: flex
+		margin: 0 auto
+		align-items: center
+		justify-content: space-around
+		max-width: 700px
+	&__title
+		font-size: 24px
+		+bold
+	&__link
+		color: $notBlack
+		font-size: 18px
+		text-decoration: underline
+@media(max-width: 500px)
+	.questions
+		&__block
+			flex-direction: column
+		&__title
+			margin-bottom: 20px

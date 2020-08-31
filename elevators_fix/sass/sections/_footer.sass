@@ -1,0 +1,38 @@
+.footer
+	padding: 40px 0
+	background-color: #262626
+	color: #fff
+	&__block
+		display: flex
+		justify-content: space-around
+	&__description
+		&-title
+			text-transform: uppercase
+			+bold
+		&-subtitle
+			font-size: 14px
+
+		&-copy
+			display: block
+			margin-top: 15px
+			font-size: 14px
+	&__contacts
+		display: flex
+		flex-direction: column
+		a
+			color: #fff
+		&-main
+			margin-bottom: 10px
+		&-link
+			margin-right: 5px
+@media (max-width: 768px)
+	.footer
+		&__block
+			flex-direction: column
+			justify-content: center
+			align-items: center
+			text-align: center
+		&__description
+			margin-bottom: 25px
+
+

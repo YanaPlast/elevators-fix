@@ -1,0 +1,65 @@
+.contact-us
+	padding-top: 20px
+	padding-bottom: 80px
+	background-color: $bg_grey
+	&__wrapper
+		margin-top: -50px
+		background: url(../img/contact-us/for_form.jpg) no-repeat 110% 0
+		background-color: #fff
+		padding: 40px 60px 20px 60px
+		max-width: 900px
+		background-color: #fff
+		box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1)
+	&__title
+		font-size: 25px
+		text-transform: uppercase 
+		letter-spacing: 1px
+		+bold
+		margin-bottom: 10px
+	&__subtitle
+		margin-bottom: 20px
+.form
+	&__row
+		display: flex
+		align-items: center
+		justify-content: space-between
+		//max-width: 900px
+	&__label
+		font-size: 16px
+		display: block
+		padding-left: 5px
+		margin-bottom: 5px
+	&__group
+		flex: 0 1 100%
+		margin-bottom: 15px
+		&_triple
+			flex: 0 1 33.33%
+	&__input
+		width: 100%
+		&_triple
+			border-right: none
+@media (max-width: 991px)
+	.contact-us
+		&__wrapper
+			background-position: 130% 0
+@media (max-width: 768px)
+	.contact-us
+		&__wrapper
+			margin-top: 0
+			//background-position: 150% 0
+			background: none
+			background-color: #fff
+	.form
+		&__row
+			flex-direction: column
+		&__group
+			width: 100%
+		&__input
+			&_triple
+				border-right: 1px solid $bg_grey
+@media (max-width: 500px)
+	.contact-us
+		&__button
+			width: 100%
+
+

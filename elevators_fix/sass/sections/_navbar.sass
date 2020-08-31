@@ -1,0 +1,139 @@
+.navbar
+	position: fixed
+	z-index: 100
+	left: 0
+	top: 0
+	width: 100%
+	background-color: #fff
+	color: #fff
+	box-shadow: 0 6px 4px -4px rgba(0, 0, 0, .2);
+	&__menu
+		position: fixed
+		width: 100% // чтобы сработал контейнер и отлипло от области просмотра
+		top: 90px
+		left: 0
+		padding: 15px 0
+		background-color: $accentColor
+		transition: 0.5s
+		transform: translateY(-300%)
+		&_active
+			transition: 0.5s
+			transform: translateY(0%) // Настроить выезд в ноль при назначении класса актив 
+		&-list
+			display: flex
+			align-items: center
+			justify-content: space-around
+		&-link
+			text-transform: uppercase
+			position: relative
+		&-border
+			width: 1px
+			height: 20px
+			background-color: #fff
+	// .navbar__row
+	&__row
+		display: flex
+		justify-content: space-between
+		align-items: center
+		min-height: 90px
+
+	// .navbar__burger
+	&__burger
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		background-color: transparent
+		border: none
+		border-right: 1px solid #E9E9E9
+		border-left: 1px solid #E9E9E9
+		height: 60px
+		width: 80px
+		&:hover
+			cursor: pointer
+		&:focus
+			outline: none
+	// .navbar__button-line
+	&__button-line
+		width: 30px
+		height: 3px
+		background-color: #000
+		margin-bottom: 4px
+	// .navbar__logo
+	&__logo
+		margin: -30px
+	// .navbar__logo-img
+	&__logo-img
+		
+	// .navbar__logo-descrip
+	&__logo-descrip
+		display: block
+		p
+			font-size: 12px
+			+bold
+			line-height: 10px
+			color: #000
+			text-align: left
+	// .navbar__mobile
+	&__mobile
+		display: flex
+		flex-direction: column
+		flex-wrap: wrap
+		color: #000
+	// .navbar__mobile-phone
+	&__mobile-phone
+		font-size: 19px
+		+bold
+		text-transform: uppercase
+		//text-decoration: none
+			// .navbar__mobile-workingTime
+	&__mobile-workingTime
+		+light
+		font-size: 12px
+	// .navbar__button
+	&__button
+		min-width: 180px
+		&-link
+			color: #1f1f1f
+			+bold
+			font-size: 14px
+@media (max-width: 991px)
+	.navbar
+		&__mobile
+			display: none
+@media (max-width: 640px)
+	.navbar
+		&__button
+			display: none
+		&__logo-img
+			img
+				max-width: 80%
+				object-fit: contain
+		&__burger
+			width: 60px
+		&__menu
+			//transform: translateY(0)
+			&-list
+				flex-direction: column
+			&-border
+				display: none
+			&-link
+				margin-bottom: 15px
+				font-size: 20px
+@media (max-width: 380px)
+	.navbar
+		&__logo-img
+			max-width: 220px
+		&__burger
+			width: 50px
+		&__button-line
+			height: 2px
+
+
+					
+
+
+
+
+
+

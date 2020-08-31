@@ -1,0 +1,28 @@
+.contacts
+	background-color: $bg_grey
+	padding-bottom: 0
+	&__title
+		margin-bottom: 40px
+	&__block
+		display: flex
+		justify-content: space-around
+		flex-wrap: wrap
+		margin-bottom: 50px
+		&-item
+			text-align: center
+		&-image
+			min-height: 40px
+			margin-bottom: 20px
+		&-address
+			font-style: normal
+@media (max-width: 768px)
+	.contacts
+		&__block
+			&-item
+				width: 100%
+				margin-bottom: 40px
+			&-image
+				margin-bottom: 5px
+
+
+

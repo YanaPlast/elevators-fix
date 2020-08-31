@@ -1,0 +1,24 @@
+section.contact-us(id="contact-us")
+	.container
+		div.contact-us__wrapper
+			h2.contact-us__title Оставьте заявку
+			div.contact-us__subtitle и получите скидку 10% на первый заказ
+			form(action="#" class="contact-us__form form")
+				div.form__row
+					div.form__group.form__group_triple
+						label(class="form__label" for="#") Ваше имя
+						input(type="text" class="form__input form__input_triple input" placeholder="")
+					div.form__group.form__group_triple
+						label(class="form__label" for="#") Контактный телефон
+						input(type="tel" class="form__input form__input_triple input" placeholder="")
+					div.form__group.form__group_triple
+						label(class="form__label" for="#") E-mail
+						input(type="email" class="form__input input" placeholder="")
+				div.form__row
+					div.form__group
+						label(class="form__label" for="#") Комментарий
+						input(type="text" class="form__input input")
+				div.form__row
+					div.form__group
+						input(type="submit" class="button contact-us__button" value="Получить скидку")
+
