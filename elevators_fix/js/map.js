@@ -1,1 +1,0 @@
-		$('#map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8c6b30629cd5296d6be780fca53cd6b369d5d82b410f3c92df836b562f276e85&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>');
