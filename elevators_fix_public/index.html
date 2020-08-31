@@ -4,8 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equip="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/normolize.css">
+  <link rel="stylesheet" href="css/main.min.css">
   <title>Ремонт лифтов</title>
   <body>
     <header class="header">
@@ -26,15 +25,7 @@
           <div class="navbar__row">
             <button class="navbar__burger"><span class="navbar__button-line"></span><span class="navbar__button-line"></span><span class="navbar__button-line"></span></button>
             <div class="navbar__logo logo">
-              <div class="navbar__logo-img">
-                <picture>
-                  <source type="image/webp" srcset="img/e_y_2.webp">
-                  <source type="image/jpeg" srcset="img/e_y_2.jpg"><img src="img/e_y_2.jpg" alt="Elevators-fix">
-                </picture>
-              </div>
-              <div class="navbar__logo-descrip">
-                <p>ремонт лифтового оборудования</p>
-              </div>
+              <div class="navbar__logo-img"><img src="img/new_1.png"></div>
             </div>
             <div class="navbar__mobile"><a class="navbar__mobile-phone" href="tel:+7(8332)33-33-33">+7(8332)33-33-33</a><span class="navbar__mobile-workingTime">Ежедневно с 9 до 20</span></div>
             <div class="navbar__mobile"><a class="navbar__mobile-phone" href="tel:+7(8332)22-22-22">+7(8332)22-22-22</a><span class="navbar__mobile-workingTime">Ежедневно с 9 до 20</span></div>
@@ -247,29 +238,6 @@
       </footer>
     </main>
   </body>
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script>$('.navbar__burger').on('click', function(){
-	$('.navbar__menu').toggleClass('navbar__menu_active');
-});
-$("a[href^='#']").click(function() {
-	var _href = $(this).attr("href");
-	$("html, body").animate({scrollTop: $(_href).offset().top - 170 + "px"});
-	return false;
-});
-// Показывать карту только когда до нее докрутили
-
-/*var reviews = $('.reviews');
-var reviewsTop = reviews.offset().top;
-$(window).bind('scroll', function(){
-	var windowTop = $(this).scrollTop();
-	if(windowTop > reviewsTop) {
-		$('.map').html('<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8c6b30629cd5296d6be780fca53cd6b369d5d82b410f3c92df836b562f276e85&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>')
-		$(window).unbind('scroll')
-	}
-});
-*/
-
-
-
-  </script>
+  <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="js/main.min.js"></script>
 </html>
