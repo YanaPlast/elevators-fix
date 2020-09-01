@@ -2,6 +2,8 @@ $(window).load(function(){
 
 	$('.navbar__burger').on('click', function(){
 		$('.navbar__menu').toggleClass('navbar__menu_active');
+		$('.navbar__burger').toggleClass('navbar__burger_active');
+		$('body').toggleClass('lock');
 	});
 	$("a[href^='#']").click(function() {
 		var _href = $(this).attr("href");

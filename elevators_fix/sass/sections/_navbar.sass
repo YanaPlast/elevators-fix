@@ -14,10 +14,10 @@
 		left: 0
 		padding: 15px 0
 		background-color: $accentColor
-		transition: 0.5s
+		transition: 0.8s ease
 		transform: translateY(-300%)
 		&_active
-			transition: 0.5s
+			transition:  0.8s ease
 			transform: translateY(0%) // Настроить выезд в ноль при назначении класса актив 
 		&-list
 			display: flex
@@ -39,27 +39,54 @@
 
 	// .navbar__burger
 	&__burger
-		display: flex
-		flex-direction: column
-		justify-content: center
-		align-items: center
 		background-color: transparent
+		position: relative
 		border: none
 		border-right: 1px solid #E9E9E9
 		border-left: 1px solid #E9E9E9
 		height: 60px
 		width: 80px
+		&:before,
+		&:after
+			content: ''
+			position: absolute
+			left: 50%
+			transform: translateX(-50%)
+			width: 35px
+			height: 2px
+			background-color: #000
+			transition: 0.5s ease
+		&:after
+			bottom: 18px
+		&:before
+			top: 20px
 		&:hover
 			cursor: pointer
 		&:focus
 			outline: none
-	// .navbar__button-line
-	&__button-line
-		width: 30px
-		height: 3px
-		background-color: #000
-		margin-bottom: 4px
-	// .navbar__logo
+		&-line
+			position: absolute
+			transition: 0.5s ease
+			z-index: 100
+			left: 50%
+			transform: translateX(-50%)
+			width: 35px
+			height: 2px
+			background-color: #000
+		&_active
+			&:before
+				transform: translateX(-50%) rotate(45deg) 
+				transition: 0.5s ease
+				top: 30px
+				background-color: $notNotBlack
+			&:after
+				transform: translateX(-50%) rotate(-45deg)
+				transition: 0.5s ease
+				bottom: 27.5px
+				background-color: $notNotBlack
+			span
+				transform: scale(0)
+				transition: 0.5s ease
 	&__logo
 		margin: -30px
 	// .navbar__logo-img
@@ -101,7 +128,14 @@
 	.navbar
 		&__mobile
 			display: none
-@media (max-width: 640px)
+@media (max-width: 800px)
+	.navbar
+		&__menu
+			&-link
+				font-size: 14px
+@media (max-width: 660px)
+	body.lock
+		overflow: hidden
 	.navbar
 		&__button
 			display: none
@@ -112,14 +146,22 @@
 		&__burger
 			width: 60px
 		&__menu
+			height: 100%
 			//transform: translateY(0)
+			.container
+				height: 100%
 			&-list
+				height: 90%
 				flex-direction: column
+				justify-content:space-around
+				align-items: center
+				
 			&-border
 				display: none
 			&-link
 				margin-bottom: 15px
-				font-size: 20px
+				font-size: 23px
+				text-align: center
 @media (max-width: 380px)
 	.navbar
 		&__logo-img
